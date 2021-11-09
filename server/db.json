@@ -1,0 +1,52 @@
+{
+  "employees": [
+    {
+      "firstName": "Alok",
+      "lastName": "Bishoyi",
+      "phone": 9874563210,
+      "email": "alok.bishoyi@gmail.com",
+      "salary": 100000,
+      "id": 1
+    },
+    {
+      "id": 2,
+      "firstName": "Anil",
+      "lastName": "Dash",
+      "phone": 9861232668,
+      "email": "anil.dash@gmail.com",
+      "salary": 90000
+    },
+    {
+      "id": 3,
+      "firstName": "subhash",
+      "lastName": "jil",
+      "phone": 8123654790,
+      "email": "subhash.jil@gmail.com",
+      "salary": 80000
+    },
+    {
+      "id": 4,
+      "firstName": "Amir",
+      "lastName": "Kar",
+      "phone": 7895236410,
+      "email": "amir.kar@gmail.com",
+      "salary": 200000
+    },
+    {
+      "id": 5,
+      "firstName": "manoj",
+      "lastName": "kumar",
+      "phone": 9861232468,
+      "email": "manoj.kumar@gmail.com",
+      "salary": 120000
+    },
+    {
+      "firstName": "kunal ",
+      "lastName": "verma",
+      "phone": 7205416391,
+      "email": "kunal.verma@mail.com",
+      "salary": 56000,
+      "id": 6
+    }
+  ]
+}

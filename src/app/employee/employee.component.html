@@ -1,0 +1,76 @@
+<div class="mb-3 text-center">
+   <br>
+   <h1>Employees List</h1>
+   <hr class="my-3">
+</div>
+<div class="mx-5 my-3">
+   <table class="table table-hover table-bordered text-center">
+      <thead class="table-warning">
+         <tr>
+            <th>Employee Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone</th>
+            <th>Email Id</th>
+            <th>Salary</th>
+            <th>Edit</th>
+            <th>delete</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr *ngFor="let emp of employeeList">
+            <td>{{emp.id}}</td>
+            <td>{{emp.firstName}}</td>
+            <td>{{emp.lastName}}</td>
+            <td>{{emp.phone}}</td>
+            <td>{{emp.email}}</td>
+            <td>{{emp.salary}}</td>
+            <td><button type="button" class="btn btn-warning" style="width:80%" (click)="editEmployee(emp)">Edit</button></td>
+            <td><button type="button" class="btn btn-danger" style="width:80%" (click)="deleteEmployee(emp)">Delete</button></td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+   aria-labelledby="staticBackdropLabel" aria-hidden="true">
+   <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Employee Modal</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div class="modal-body">
+            <form [formGroup]="employeesForm">
+               <div class="form-group mb-2">
+                  <label class="form-label">First Name</label>
+                  <input type="text" required class="form-control mb-3" placeholder="Enter First Name" formControlName="firstName" [ngClass]="firstName.invalid && firstName.touched ? 'is-invalid' : ''">
+               </div>
+               <div class="form-group mb-2">
+                  <label class="form-label">Last Name</label>
+                  <input type="text" required class="form-control mb-3" placeholder="Enter Last Name" formControlName="lastName">
+               </div>
+               <div class="form-group mb-2">
+                  <label class="form-label">Phone</label>
+                  <input type="number" required class="form-control mb-3" placeholder="Enter Phone" formControlName="phone">
+               </div>
+               <div class="form-group mb-2">
+                  <label class="form-label">Email Id</label>
+                  <input type="text" required class="form-control mb-3" placeholder="Enter Email Id" formControlName="email">
+               </div>
+               <div class="form-group mb-2">
+                  <label class="form-label">Salary</label>
+                  <input type="number" class="form-control mb-3" placeholder="Enter Salary" formControlName="salary">
+               </div>
+            </form>
+         </div>
+         <div class="modal-footer">
+            <button type="button" id="saveEmployee" class="btn btn-primary" (click)="addNewEmployee()">Save</button>
+            <button type="button" id="closeModal" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" style="display: none;" id="updateEmployee" class="btn btn-primary" (click)="updateEmployee()">Update</button>
+         </div>
+      </div>
+   </div>
+</div>
